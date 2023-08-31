@@ -43,9 +43,9 @@ if %ERRORLEVEL% EQU 0 (Set colorj=Green && Set Java=Java başarıyla kuruldu!) E
 winget install --id=Adobe.Acrobat.Reader.64-bit -e -h
 if %ERRORLEVEL% EQU 0 (Set colora=Green && Set Acro=Acrobat Reader başarıyla kuruldu!) Else (Set colora=Red && Set Acro=Acrobat Reader kurulamadı!)
 winget install --id=Valve.Steam -e -h
-if %ERRORLEVEL% EQU 0 (Set colora=Green && Set steam=steam başarıyla kuruldu!) Else (Set colora=Red && Set steam=steam kurulamadı!)
+if %ERRORLEVEL% EQU 0 (Set colors=Green && Set steam=steam başarıyla kuruldu!) Else (Set colors=Red && Set steam=steam kurulamadı!)
 winget install --id=Discord.Discord -e -h
-if %ERRORLEVEL% EQU 0 (Set colora=Green && Set discord=discord başarıyla kuruldu!) Else (Set colora=Red && Set discord=discord kurulamadı!)
+if %ERRORLEVEL% EQU 0 (Set colord=Green && Set discord=discord başarıyla kuruldu!) Else (Set colord=Red && Set discord=discord kurulamadı!)
 echo Gereksiz programlar kaldırılıyor...
 winget uninstall Microsoft.SkypeApp_kzf8qxf38zg5c -h
 winget uninstall Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe -h
@@ -70,8 +70,8 @@ powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colorw% %Winrar%
 powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colorv% %VLC%
 powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colorj% %Java%
 powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colora% %Acro%
-powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colora% %steam%
-powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colora% %discord%
+powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colors% %steam%
+powershell -ExecutionPolicy ByPass -Command Write-Host -fore %colord% %discord%
 cd "C:\Users\Public\Desktop\"
 del vlc* /s /q
 del Adob* /s /q
